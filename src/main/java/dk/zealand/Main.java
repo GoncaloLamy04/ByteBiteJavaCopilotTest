@@ -1,6 +1,5 @@
 package dk.zealand;
 
-import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -11,6 +10,7 @@ public class Main {
             "Vegansk bowl"
     };
 
+    // PRICES correspond to DISHES order: Festivalburger, Sprøde fritter, Vegansk bowl
     private static final int[] PRICES = {59, 35, 65};
 
     public static void main(String[] args) {
