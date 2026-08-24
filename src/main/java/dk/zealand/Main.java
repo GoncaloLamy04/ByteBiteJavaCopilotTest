@@ -1,5 +1,6 @@
 package dk.zealand;
 
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -9,9 +10,6 @@ public class Main {
             "Sprøde fritter",
             "Vegansk bowl"
     };
-
-    // PRICES correspond to DISHES order: Festivalburger, Sprøde fritter, Vegansk bowl
-    private static final int[] PRICES = {59, 35, 65};
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -46,11 +44,14 @@ public class Main {
         System.out.print("Vælg: ");
     }
 
+    private static final int[] PRICES = {59, 35, 65};
+
     private static void showDishes() {
         System.out.println("Retter:");
 
         for (int i = 0; i < DISHES.length; i++) {
-            System.out.printf("%d. %s — %d kr.%n", i + 1, DISHES[i], PRICES[i]);
+            String price = i < PRICES.length ? PRICES[i] + " kr." : "-";
+            System.out.printf("%d. %s - %s%n", i + 1, DISHES[i], price);
         }
     }
 }
